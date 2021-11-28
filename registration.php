@@ -65,7 +65,7 @@ if (isset($_POST['email'])) {
   // $_SESSION['e_regulamin'] = '< style="color:red">Potwierdź akceptację regulaminu!<///span>';
   //}
   //Bot check
-  $secretKey = "6Ld6tFYdAAAAAJXNEbsl5GBwy6sKT8WWI6NW73e9";
+  $secretKey = "";
 
   $checkC = file_get_contents('https://www.google.com/recaptcha/api/siteverify?secret=' . $secretKey . '&response=' . $_POST['g-recaptcha-response']);
 
@@ -205,7 +205,7 @@ if (isset($_POST['email'])) {
           <label class="form-label" for="form2Example4"> Powtórz hasło</label>
         </div>
         
-        <div class="g-recaptcha" data-sitekey="6Ld6tFYdAAAAAHXcr3H-YLUf9UOiqLz-3wh7r5yg"></div>
+        <div class="g-recaptcha" data-sitekey=""></div>
         <?php
         if (isset($_SESSION['e_bot'])) {
           echo '<div class ="error">' . $_SESSION['e_bot'] . '</div>';
